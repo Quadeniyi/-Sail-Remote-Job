@@ -1,0 +1,184 @@
+@import url("https://fonts.google.com/specimen/Epilogue");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fafafa;
+  font-family: Epilogue, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  /* min-width: 95vw; */
+  min-height: 100vh;
+}
+/* ====== HEADER ===== */
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem auto;
+  max-width: 1440px;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 2rem;
+}
+.nav-links a {
+  margin-right: 0.5rem;
+  text-decoration: none;
+  color: #696969;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+.nav-links a:hover {
+  color: #141414;
+}
+.login a {
+  margin-right: 0.5rem;
+  text-decoration: none;
+  color: #696969;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.login a:hover {
+  color: #141414;
+}
+.login button {
+  padding: 0.25rem;
+  background-color: #fafafa;
+  border: 1px solid #141414;
+  border-radius: 0.5rem;
+  transition-duration: 0.5s;
+}
+.login button:hover {
+  background-color: #141414;
+  color: #fafafa;
+  cursor: pointer;
+}
+.nav-toggle {
+  display: none;
+}
+/* ====== HERO ===== */
+.hero {
+  display: flex;
+  padding: 3rem;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  max-width: 1370px;
+  margin: 0 auto;
+}
+.hero article {
+  width: 50%;
+}
+.hero article h1 {
+  font-size: 3rem;
+}
+.hero article h1 span {
+  display: block;
+}
+.hero article h1,
+p,
+button {
+  margin-bottom: 2rem;
+}
+.hero article button {
+  margin-bottom: 5rem;
+  padding: 0.75rem;
+  font-size: 18px;
+  background-color: #141414;
+  border-radius: 0.5rem;
+  color: #fafafa;
+  transition-duration: 0.5s;
+}
+.hero article button:hover {
+  background-color: transparent;
+  color: #141414;
+  border: 1px solid #141414;
+  cursor: pointer;
+}
+
+.hero article p {
+  max-width: 400px;
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 500;
+  color: #696969;
+}
+.platform {
+  /* margin-top: 1rem; */
+  margin-bottom: -3rem;
+}
+.platform span {
+  padding: 0.5rem;
+}
+.platform span img {
+  width: 7vw;
+}
+.heroImgContainer {
+  width: 50vh;
+}
+.heroImgContainer img {
+  width: 100%;
+  object-fit: cover;
+}
+/*=====MOBILE SCREEN ===== */
+@media screen and (max-width: 425px) {
+  .container {
+    padding: 1rem;
+  }
+  .nav-links {
+    display: none;
+  }
+  .login {
+    display: none;
+  }
+  .nav-toggle {
+    display: block;
+    border: none;
+    font-size: 2rem;
+  }
+  .hero {
+    flex-direction: column-reverse;
+    padding: 0;
+  }
+  .hero article {
+    text-align: center;
+    width: 95vw;
+  }
+  .hero article h1,
+  p,
+  button {
+    margin-bottom: 1.5rem;
+  }
+  .hero article h1 {
+    font-size: 28px;
+    max-width: 95vw;
+  }
+  .hero article h1 span {
+    display: inline;
+  }
+  .hero article p {
+    font-size: 18px;
+  }
+  .platform {
+    margin-bottom: 1rem;
+  }
+  .platform span img {
+    width: 15vw;
+  }
+  .heroImgContainer img {
+    content: url("./assets/image-hero-mobile.png");
+  }
+}
